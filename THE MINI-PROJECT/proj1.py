@@ -6,20 +6,23 @@ students = [
     {"name" : "Pandu", "marks" : 70},
 ]
 
-for data in students:
-    if data["marks"] > 70:
-        print(data["name"])
+if students:
+    for data in students:
+        if data["marks"] > 70:
+            print(data["name"])
 
-new_item = {"name" : "Chinnu", "marks" : 80}
+    new_item = {"name" : "Chinnu", "marks" : 80}
 
-students.append(new_item)
+    students.append(new_item)
 
-count = 0
+    count = 0
 
-for data in students:
-    count = count + data["marks"]
+    for data in students:
+        count = count + data["marks"]
 
-print("Average: ",count/6)
+    print("Average: ",count/6)
 
-topper = max(students, key = lambda x : x["marks"])
-print(topper["name"])
+    topper = max(students, key = lambda x : x["marks"])
+    print(topper["name"], topper["marks"])
+else:
+    print("No data available!")
