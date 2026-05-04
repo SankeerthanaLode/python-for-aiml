@@ -20,7 +20,7 @@ if students:
     for data in students:
         count = count + data["marks"]
 
-    print("Average: ",count/6)
+    print("Average: ",count/len(students))
 
     topper = max(students, key = lambda x : x["marks"])
     print(topper["name"], topper["marks"])
