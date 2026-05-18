@@ -12,3 +12,9 @@ print(df.groupby("city")["marks"].agg(["mean", "max", "min"]))
 print()
 print(df.groupby("city")["name"].count())
 print()
+
+city_avg = df.groupby("city")["marks"].mean()
+
+top_city = city_avg.idxmax()
+
+print("City with highest average marks:", top_city)
